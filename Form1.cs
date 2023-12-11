@@ -169,7 +169,7 @@ namespace MetodosUIVer3
         {
             lblTitle.Text = "Bisección";
             this.PnlFormLoader.Controls.Clear();
-            frmBisec menuForm = new frmBisec() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmBisec2 menuForm = new frmBisec2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             menuForm.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(menuForm);
             menuForm.Show();

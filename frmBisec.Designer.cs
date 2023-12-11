@@ -56,20 +56,21 @@
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Font = new Font("Oswald Medium", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(388, 22);
+            label2.Location = new Point(341, 16);
             label2.Name = "label2";
-            label2.Size = new Size(407, 80);
+            label2.Size = new Size(390, 44);
             label2.TabIndex = 5;
             label2.Text = "Método de Bisección\r\n";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(73, 22);
+            pictureBox2.Location = new Point(64, 16);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(119, 80);
+            pictureBox2.Size = new Size(104, 60);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
@@ -77,40 +78,44 @@
             // txtFuncion
             // 
             txtFuncion.Anchor = AnchorStyles.Top;
-            txtFuncion.Location = new Point(205, 194);
+            txtFuncion.Location = new Point(180, 146);
+            txtFuncion.Margin = new Padding(3, 2, 3, 2);
             txtFuncion.Multiline = true;
             txtFuncion.Name = "txtFuncion";
-            txtFuncion.Size = new Size(168, 35);
+            txtFuncion.Size = new Size(148, 27);
             txtFuncion.TabIndex = 1;
             txtFuncion.TextChanged += txtFuncion_TextChanged;
             // 
             // txtIntervaloB
             // 
             txtIntervaloB.Anchor = AnchorStyles.Top;
-            txtIntervaloB.Location = new Point(614, 194);
+            txtIntervaloB.Location = new Point(538, 146);
+            txtIntervaloB.Margin = new Padding(3, 2, 3, 2);
             txtIntervaloB.Multiline = true;
             txtIntervaloB.Name = "txtIntervaloB";
-            txtIntervaloB.Size = new Size(168, 35);
+            txtIntervaloB.Size = new Size(148, 27);
             txtIntervaloB.TabIndex = 3;
             txtIntervaloB.TextChanged += txtIntervaloB_TextChanged;
             // 
             // txtIntervaloA
             // 
             txtIntervaloA.Anchor = AnchorStyles.Top;
-            txtIntervaloA.Location = new Point(403, 194);
+            txtIntervaloA.Location = new Point(354, 146);
+            txtIntervaloA.Margin = new Padding(3, 2, 3, 2);
             txtIntervaloA.Multiline = true;
             txtIntervaloA.Name = "txtIntervaloA";
-            txtIntervaloA.Size = new Size(168, 35);
+            txtIntervaloA.Size = new Size(148, 27);
             txtIntervaloA.TabIndex = 2;
             txtIntervaloA.TextChanged += txtIntervaloA_TextChanged;
             // 
             // txtNumeroIteraciones
             // 
             txtNumeroIteraciones.Anchor = AnchorStyles.Top;
-            txtNumeroIteraciones.Location = new Point(825, 194);
+            txtNumeroIteraciones.Location = new Point(723, 146);
+            txtNumeroIteraciones.Margin = new Padding(3, 2, 3, 2);
             txtNumeroIteraciones.Multiline = true;
             txtNumeroIteraciones.Name = "txtNumeroIteraciones";
-            txtNumeroIteraciones.Size = new Size(168, 35);
+            txtNumeroIteraciones.Size = new Size(148, 27);
             txtNumeroIteraciones.TabIndex = 10;
             txtNumeroIteraciones.TextChanged += txtNumeroIteraciones_TextChanged;
             // 
@@ -120,14 +125,15 @@
             btnCalcular.AutoSize = true;
             btnCalcular.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCalcular.DialogResult = DialogResult.OK;
-            btnCalcular.Font = new Font("Oswald ExtraLight", 12.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCalcular.Location = new Point(544, 278);
+            btnCalcular.Font = new Font("Microsoft Sans Serif", 12.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCalcular.Location = new Point(477, 208);
+            btnCalcular.Margin = new Padding(3, 2, 3, 2);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(94, 46);
+            btnCalcular.Size = new Size(86, 30);
             btnCalcular.TabIndex = 4;
             btnCalcular.Text = "Calcular!";
             btnCalcular.UseVisualStyleBackColor = true;
-            btnCalcular.Click += btnCalcular_Click_1;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // webView2
             // 
@@ -135,9 +141,10 @@
             webView2.Anchor = AnchorStyles.Top;
             webView2.CreationProperties = null;
             webView2.DefaultBackgroundColor = Color.White;
-            webView2.Location = new Point(365, 446);
+            webView2.Location = new Point(320, 334);
+            webView2.Margin = new Padding(3, 2, 3, 2);
             webView2.Name = "webView2";
-            webView2.Size = new Size(449, 130);
+            webView2.Size = new Size(393, 98);
             webView2.TabIndex = 13;
             webView2.ZoomFactor = 1D;
             webView2.Click += webView2_Click;
@@ -148,11 +155,11 @@
             labelMenu2.AutoSize = true;
             labelMenu2.BackColor = Color.White;
             labelMenu2.FlatStyle = FlatStyle.Flat;
-            labelMenu2.Font = new Font("Oswald Light", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMenu2.Font = new Font("Microsoft Sans Serif", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
             labelMenu2.ForeColor = Color.Black;
-            labelMenu2.Location = new Point(98, 23);
+            labelMenu2.Location = new Point(87, 17);
             labelMenu2.Name = "labelMenu2";
-            labelMenu2.Size = new Size(986, 74);
+            labelMenu2.Size = new Size(1080, 44);
             labelMenu2.TabIndex = 14;
             labelMenu2.Text = resources.GetString("labelMenu2.Text");
             labelMenu2.TextAlign = ContentAlignment.MiddleCenter;
@@ -171,9 +178,10 @@
             pnlMainBisec.Controls.Add(webView2);
             pnlMainBisec.Controls.Add(txtFuncion);
             pnlMainBisec.Dock = DockStyle.Fill;
-            pnlMainBisec.Location = new Point(0, 125);
+            pnlMainBisec.Location = new Point(0, 94);
+            pnlMainBisec.Margin = new Padding(3, 2, 3, 2);
             pnlMainBisec.Name = "pnlMainBisec";
-            pnlMainBisec.Size = new Size(1182, 628);
+            pnlMainBisec.Size = new Size(1036, 477);
             pnlMainBisec.TabIndex = 13;
             pnlMainBisec.Paint += panel2_Paint;
             // 
@@ -181,10 +189,10 @@
             // 
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
-            label4.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(836, 145);
+            label4.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(733, 109);
             label4.Name = "label4";
-            label4.Size = new Size(146, 29);
+            label4.Size = new Size(155, 17);
             label4.TabIndex = 17;
             label4.Text = "Numero de iteraciones:";
             // 
@@ -192,10 +200,10 @@
             // 
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
-            label3.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(660, 145);
+            label3.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(579, 109);
             label3.Name = "label3";
-            label3.Size = new Size(77, 29);
+            label3.Size = new Size(78, 17);
             label3.TabIndex = 16;
             label3.Text = "Intervalo b:";
             // 
@@ -203,10 +211,10 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(449, 145);
+            label1.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(394, 109);
             label1.Name = "label1";
-            label1.Size = new Size(77, 29);
+            label1.Size = new Size(78, 17);
             label1.TabIndex = 15;
             label1.Text = "Intervalo a:";
             // 
@@ -214,10 +222,10 @@
             // 
             lblFuncion.Anchor = AnchorStyles.Top;
             lblFuncion.AutoSize = true;
-            lblFuncion.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFuncion.Location = new Point(230, 145);
+            lblFuncion.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFuncion.Location = new Point(202, 109);
             lblFuncion.Name = "lblFuncion";
-            lblFuncion.Size = new Size(118, 29);
+            lblFuncion.Size = new Size(124, 17);
             lblFuncion.TabIndex = 14;
             lblFuncion.Text = "Ingrese la función:";
             // 
@@ -227,29 +235,32 @@
             panelTitle.Controls.Add(pictureBox2);
             panelTitle.Dock = DockStyle.Top;
             panelTitle.Location = new Point(0, 0);
+            panelTitle.Margin = new Padding(3, 2, 3, 2);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(1182, 125);
+            panelTitle.Size = new Size(1036, 94);
             panelTitle.TabIndex = 14;
             // 
             // panel2
             // 
             panel2.Controls.Add(labelMenu2);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 125);
+            panel2.Location = new Point(0, 94);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1182, 125);
+            panel2.Size = new Size(1036, 94);
             panel2.TabIndex = 15;
             // 
             // frmBisec
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1182, 753);
+            ClientSize = new Size(1036, 571);
             Controls.Add(panel2);
             Controls.Add(pnlMainBisec);
             Controls.Add(panelTitle);
-            MinimumSize = new Size(1200, 800);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(1052, 610);
             Name = "frmBisec";
             Text = "frmBisec";
             Load += frmBisec_Load;

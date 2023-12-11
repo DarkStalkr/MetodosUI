@@ -169,11 +169,6 @@ namespace MetodosUIVer3
             // Elimina cualquier lógica relacionada con txtErrorPorcentual en este evento si es necesario
         }
 
-        private void btnCalcular_Click_1(object sender, EventArgs e)
-        {
-            // Puedes eliminar este evento si no es necesario
-        }
-
         private void txtErrorPorcentual_TextChanged(object sender, EventArgs e)
         {
             // Puedes eliminar este evento si no es necesario

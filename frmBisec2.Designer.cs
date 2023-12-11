@@ -32,6 +32,7 @@
             panel2 = new Panel();
             labelMenu2 = new Label();
             pnlMainBisec = new Panel();
+            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
@@ -69,11 +70,11 @@
             labelMenu2.AutoSize = true;
             labelMenu2.BackColor = Color.White;
             labelMenu2.FlatStyle = FlatStyle.Flat;
-            labelMenu2.Font = new Font("Oswald Light", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMenu2.Font = new Font("Microsoft Sans Serif", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
             labelMenu2.ForeColor = Color.Black;
             labelMenu2.Location = new Point(107, 14);
             labelMenu2.Name = "labelMenu2";
-            labelMenu2.Size = new Size(820, 62);
+            labelMenu2.Size = new Size(1080, 44);
             labelMenu2.TabIndex = 14;
             labelMenu2.Text = resources.GetString("labelMenu2.Text");
             labelMenu2.TextAlign = ContentAlignment.MiddleCenter;
@@ -82,6 +83,7 @@
             // 
             pnlMainBisec.AutoSize = true;
             pnlMainBisec.BackColor = Color.White;
+            pnlMainBisec.Controls.Add(label5);
             pnlMainBisec.Controls.Add(label4);
             pnlMainBisec.Controls.Add(label3);
             pnlMainBisec.Controls.Add(label1);
@@ -100,14 +102,23 @@
             pnlMainBisec.TabIndex = 16;
             pnlMainBisec.Paint += pnlMainBisec_Paint;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(301, 232);
+            label5.Name = "label5";
+            label5.Size = new Size(23, 15);
+            label5.TabIndex = 18;
+            label5.Text = "ola";
+            // 
             // label4
             // 
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
-            label4.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(1150, 109);
             label4.Name = "label4";
-            label4.Size = new Size(122, 24);
+            label4.Size = new Size(155, 17);
             label4.TabIndex = 17;
             label4.Text = "Numero de iteraciones:";
             // 
@@ -115,10 +126,10 @@
             // 
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
-            label3.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(656, 108);
             label3.Name = "label3";
-            label3.Size = new Size(64, 24);
+            label3.Size = new Size(78, 17);
             label3.TabIndex = 16;
             label3.Text = "Intervalo b:";
             // 
@@ -126,10 +137,10 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(471, 108);
             label1.Name = "label1";
-            label1.Size = new Size(63, 24);
+            label1.Size = new Size(78, 17);
             label1.TabIndex = 15;
             label1.Text = "Intervalo a:";
             // 
@@ -137,10 +148,10 @@
             // 
             lblFuncion.Anchor = AnchorStyles.Top;
             lblFuncion.AutoSize = true;
-            lblFuncion.Font = new Font("Oswald Light", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFuncion.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             lblFuncion.Location = new Point(279, 108);
             lblFuncion.Name = "lblFuncion";
-            lblFuncion.Size = new Size(99, 24);
+            lblFuncion.Size = new Size(124, 17);
             lblFuncion.TabIndex = 14;
             lblFuncion.Text = "Ingrese la función:";
             // 
@@ -150,11 +161,11 @@
             btnCalcular.AutoSize = true;
             btnCalcular.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCalcular.DialogResult = DialogResult.OK;
-            btnCalcular.Font = new Font("Oswald ExtraLight", 12.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCalcular.Font = new Font("Microsoft Sans Serif", 12.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             btnCalcular.Location = new Point(478, 217);
             btnCalcular.Margin = new Padding(3, 2, 3, 2);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(79, 39);
+            btnCalcular.Size = new Size(86, 30);
             btnCalcular.TabIndex = 4;
             btnCalcular.Text = "Calcular!";
             btnCalcular.UseVisualStyleBackColor = true;
@@ -169,6 +180,7 @@
             txtIntervaloA.Name = "txtIntervaloA";
             txtIntervaloA.Size = new Size(148, 27);
             txtIntervaloA.TabIndex = 2;
+            txtIntervaloA.TextChanged += txtIntervaloA_TextChanged;
             // 
             // txtIntervaloB
             // 
@@ -229,11 +241,11 @@
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Font = new Font("Oswald Medium", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(353, 13);
             label2.Name = "label2";
-            label2.Size = new Size(328, 64);
+            label2.Size = new Size(390, 44);
             label2.TabIndex = 5;
             label2.Text = "Método de Bisección\r\n";
             // 
@@ -259,6 +271,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmBisec2";
             Text = "frmBisec2";
+            Load += frmBisec2_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             pnlMainBisec.ResumeLayout(false);
@@ -289,5 +302,6 @@
         private Panel panelTitle;
         private Label label2;
         private PictureBox pictureBox2;
+        private Label label5;
     }
 }
