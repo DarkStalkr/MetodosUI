@@ -1,46 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #333;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
 
 <div class="container">
     <h1>Calculadora de Métodos Numéricos Avanzados</h1>
 
     <p>Este proyecto en GitHub se llama "Calculadora de Métodos Numéricos Avanzados" y ha sido desarrollado por...</p>
 
-    <!-- Agrega el resto de tu contenido aquí -->
+Bisección
+El método de Bisección es implementado en C# y toma como parámetros una función a resolver, los valores iniciales del intervalo y el número máximo de iteraciones. El método utiliza la bisección iterativa para encontrar la raíz de la función, calculando el punto medio del intervalo en cada iteración y actualizando el intervalo según el signo de la función en ese punto medio.
+
+Punto Fijo
+El método de Punto Fijo es implementado en C# y toma como parámetros la función a resolver, el valor inicial y el número máximo de iteraciones. Este método resuelve ecuaciones no lineales de manera iterativa, actualizando el valor de la aproximación en cada iteración basándose en la evaluación de la función en el valor anterior.
+
+Newton-Raphson
+El método de Newton-Raphson es implementado en C# y toma como parámetros la función a resolver y el valor inicial. Al igual que el Punto Fijo, resuelve ecuaciones no lineales de manera iterativa, utilizando la derivada de la función para calcular el nuevo valor de la aproximación en cada iteración.
+
+Además de estos métodos, el proyecto también incluye implementaciones para la interpolación lineal, interpolación cuadrática y el polinomio interpolador de Lagrange, cada uno con su respectiva explicación y código en C#. Estos métodos permiten estimar valores y construir polinomios interpoladores utilizando conjuntos de puntos proporcionados por el usuario.
 
 </div>
 
