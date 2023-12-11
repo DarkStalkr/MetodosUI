@@ -63,6 +63,16 @@ namespace MetodosUIVer3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _61399203 {
+            get {
+                object obj = ResourceManager.GetObject("61399203", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _683px_Escudo_UNAM_escalable_svg {
             get {
                 object obj = ResourceManager.GetObject("683px-Escudo-UNAM-escalable.svg", resourceCulture);
@@ -126,6 +136,16 @@ namespace MetodosUIVer3.Properties {
         internal static System.Drawing.Bitmap loginlogo {
             get {
                 object obj = ResourceManager.GetObject("loginlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngegg {
+            get {
+                object obj = ResourceManager.GetObject("pngegg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

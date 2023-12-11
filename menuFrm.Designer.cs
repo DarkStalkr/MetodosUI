@@ -30,18 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuForm));
             labelMenu1 = new Label();
-            pictureMenu1 = new PictureBox();
-            pictureMenu2 = new PictureBox();
             labelMenu2 = new Label();
             labelMenu3 = new Label();
             pnlDegradadoMenu = new Panel();
             panelMain = new Panel();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureMenu1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureMenu2).BeginInit();
+            pictureBox1 = new PictureBox();
             pnlDegradadoMenu.SuspendLayout();
             panelMain.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // labelMenu1
@@ -49,37 +47,13 @@
             labelMenu1.Anchor = AnchorStyles.Top;
             labelMenu1.AutoSize = true;
             labelMenu1.BackColor = Color.FromArgb(0, 0, 0, 0);
-            labelMenu1.Font = new Font("Oswald Medium", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMenu1.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             labelMenu1.ForeColor = Color.White;
-            labelMenu1.Location = new Point(310, 20);
+            labelMenu1.Location = new Point(271, 15);
             labelMenu1.Name = "labelMenu1";
-            labelMenu1.Size = new Size(563, 80);
+            labelMenu1.Size = new Size(544, 44);
             labelMenu1.TabIndex = 0;
             labelMenu1.Text = "Proyecto Métodos Numéricos";
-            // 
-            // pictureMenu1
-            // 
-            pictureMenu1.BackColor = Color.FromArgb(0, 0, 0, 0);
-            pictureMenu1.Image = Properties.Resources._683px_Escudo_UNAM_escalable_svg;
-            pictureMenu1.Location = new Point(24, 20);
-            pictureMenu1.Name = "pictureMenu1";
-            pictureMenu1.Size = new Size(163, 139);
-            pictureMenu1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureMenu1.TabIndex = 1;
-            pictureMenu1.TabStop = false;
-            // 
-            // pictureMenu2
-            // 
-            pictureMenu2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureMenu2.BackColor = Color.FromArgb(0, 0, 0, 0);
-            pictureMenu2.Image = (Image)resources.GetObject("pictureMenu2.Image");
-            pictureMenu2.Location = new Point(997, 20);
-            pictureMenu2.Name = "pictureMenu2";
-            pictureMenu2.Size = new Size(163, 139);
-            pictureMenu2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureMenu2.TabIndex = 2;
-            pictureMenu2.TabStop = false;
-            pictureMenu2.Click += pictureBox2_Click;
             // 
             // labelMenu2
             // 
@@ -87,11 +61,11 @@
             labelMenu2.AutoSize = true;
             labelMenu2.BackColor = Color.FromArgb(0, 0, 0, 0);
             labelMenu2.FlatStyle = FlatStyle.Flat;
-            labelMenu2.Font = new Font("Oswald Light", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMenu2.Font = new Font("Microsoft Sans Serif", 12.7999992F, FontStyle.Regular, GraphicsUnit.Point);
             labelMenu2.ForeColor = Color.White;
-            labelMenu2.Location = new Point(179, 115);
+            labelMenu2.Location = new Point(157, 86);
             labelMenu2.Name = "labelMenu2";
-            labelMenu2.Size = new Size(824, 111);
+            labelMenu2.Size = new Size(900, 66);
             labelMenu2.TabIndex = 3;
             labelMenu2.Text = "Esta calculadora está diseñada para abordar problemas matemáticos mediante métodos numéricos avanzados. \r\nAlgunas de las capacidades clave incluyen:\r\n\r\n";
             // 
@@ -100,11 +74,11 @@
             labelMenu3.Anchor = AnchorStyles.Top;
             labelMenu3.AutoSize = true;
             labelMenu3.BackColor = Color.FromArgb(0, 0, 0, 0);
-            labelMenu3.Font = new Font("Oswald ExtraLight", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMenu3.Font = new Font("Microsoft Sans Serif", 14.2F, FontStyle.Regular, GraphicsUnit.Point);
             labelMenu3.ForeColor = Color.White;
-            labelMenu3.Location = new Point(51, 87);
+            labelMenu3.Location = new Point(45, 65);
             labelMenu3.Name = "labelMenu3";
-            labelMenu3.Size = new Size(1081, 246);
+            labelMenu3.Size = new Size(1023, 144);
             labelMenu3.TabIndex = 4;
             labelMenu3.Text = resources.GetString("labelMenu3.Text");
             // 
@@ -115,8 +89,9 @@
             pnlDegradadoMenu.Controls.Add(panel1);
             pnlDegradadoMenu.Dock = DockStyle.Fill;
             pnlDegradadoMenu.Location = new Point(0, 0);
+            pnlDegradadoMenu.Margin = new Padding(3, 2, 3, 2);
             pnlDegradadoMenu.Name = "pnlDegradadoMenu";
-            pnlDegradadoMenu.Size = new Size(1182, 753);
+            pnlDegradadoMenu.Size = new Size(1034, 565);
             pnlDegradadoMenu.TabIndex = 5;
             pnlDegradadoMenu.Paint += panel1_Paint;
             // 
@@ -125,41 +100,52 @@
             panelMain.BackColor = Color.FromArgb(0, 0, 0, 0);
             panelMain.Controls.Add(labelMenu3);
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(0, 230);
+            panelMain.Location = new Point(0, 172);
+            panelMain.Margin = new Padding(3, 2, 3, 2);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1182, 523);
+            panelMain.Size = new Size(1034, 393);
             panelMain.TabIndex = 6;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labelMenu2);
-            panel1.Controls.Add(pictureMenu2);
             panel1.Controls.Add(labelMenu1);
-            panel1.Controls.Add(pictureMenu1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1182, 230);
+            panel1.Size = new Size(1034, 172);
             panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.pngegg;
+            pictureBox1.Location = new Point(45, 15);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 44);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // menuForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 0, 43);
-            ClientSize = new Size(1182, 753);
+            ClientSize = new Size(1034, 565);
             Controls.Add(pnlDegradadoMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "menuForm";
             Text = "menuFrm";
             Load += menuForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureMenu1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureMenu2).EndInit();
             pnlDegradadoMenu.ResumeLayout(false);
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -167,12 +153,11 @@
         #endregion
 
         private Label labelMenu1;
-        private PictureBox pictureMenu1;
-        private PictureBox pictureMenu2;
         private Label labelMenu2;
         private Label labelMenu3;
         private Panel pnlDegradadoMenu;
         private Panel panel1;
         private Panel panelMain;
+        private PictureBox pictureBox1;
     }
 }
