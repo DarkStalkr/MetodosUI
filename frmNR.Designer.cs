@@ -65,9 +65,9 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
@@ -100,7 +100,7 @@
             // 
             // txtEstimacionInicial
             // 
-            txtEstimacionInicial.Anchor = AnchorStyles.None;
+            txtEstimacionInicial.Anchor = AnchorStyles.Top;
             txtEstimacionInicial.Location = new Point(434, 104);
             txtEstimacionInicial.Margin = new Padding(3, 2, 3, 2);
             txtEstimacionInicial.Multiline = true;
@@ -111,7 +111,7 @@
             // 
             // txtNumeroIteraciones
             // 
-            txtNumeroIteraciones.Anchor = AnchorStyles.None;
+            txtNumeroIteraciones.Anchor = AnchorStyles.Top;
             txtNumeroIteraciones.Location = new Point(434, 170);
             txtNumeroIteraciones.Margin = new Padding(3, 2, 3, 2);
             txtNumeroIteraciones.Multiline = true;
@@ -122,7 +122,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Anchor = AnchorStyles.None;
+            btnCalcular.Anchor = AnchorStyles.Top;
             btnCalcular.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCalcular.Location = new Point(434, 214);
             btnCalcular.Margin = new Padding(3, 2, 3, 2);
@@ -135,7 +135,7 @@
             // 
             // txtFuncion
             // 
-            txtFuncion.Anchor = AnchorStyles.None;
+            txtFuncion.Anchor = AnchorStyles.Top;
             txtFuncion.Location = new Point(434, 34);
             txtFuncion.Margin = new Padding(3, 2, 3, 2);
             txtFuncion.Multiline = true;
@@ -146,7 +146,7 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.None;
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(457, 7);
@@ -158,7 +158,7 @@
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.None;
+            label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(474, 74);
@@ -170,7 +170,7 @@
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.None;
+            label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(430, 142);
@@ -182,10 +182,9 @@
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(201, 17);
+            label6.Location = new Point(135, 14);
             label6.Name = "label6";
             label6.Size = new Size(764, 48);
             label6.TabIndex = 10;
@@ -224,7 +223,7 @@
             // webView2
             // 
             webView2.AllowExternalDrop = true;
-            webView2.Anchor = AnchorStyles.None;
+            webView2.Anchor = AnchorStyles.Top;
             webView2.CreationProperties = null;
             webView2.DefaultBackgroundColor = Color.White;
             webView2.Location = new Point(303, 252);
