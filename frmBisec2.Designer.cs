@@ -32,7 +32,6 @@
             panel2 = new Panel();
             labelMenu2 = new Label();
             pnlMainBisec = new Panel();
-            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
@@ -83,7 +82,6 @@
             // 
             pnlMainBisec.AutoSize = true;
             pnlMainBisec.BackColor = Color.White;
-            pnlMainBisec.Controls.Add(label5);
             pnlMainBisec.Controls.Add(label4);
             pnlMainBisec.Controls.Add(label3);
             pnlMainBisec.Controls.Add(label1);
@@ -101,15 +99,6 @@
             pnlMainBisec.Size = new Size(1034, 621);
             pnlMainBisec.TabIndex = 16;
             pnlMainBisec.Paint += pnlMainBisec_Paint;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(301, 232);
-            label5.Name = "label5";
-            label5.Size = new Size(23, 15);
-            label5.TabIndex = 18;
-            label5.Text = "ola";
             // 
             // label4
             // 
@@ -302,6 +291,5 @@
         private Panel panelTitle;
         private Label label2;
         private PictureBox pictureBox2;
-        private Label label5;
     }
 }
