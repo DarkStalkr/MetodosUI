@@ -5,8 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using Microsoft.CodeAnalysis.Scripting;
+
 
 
 namespace MetodosUIVer3
@@ -21,60 +25,77 @@ namespace MetodosUIVer3
 
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
+        private async void btnCalcular_Click(object sender, EventArgs e)
         {
-            // Obtener los valores de a y b desde los cuadros de texto
             double a = double.Parse(txtIntervaloA.Text);
             double b = double.Parse(txtIntervaloB.Text);
+            string funcionTexto = txtFuncion.Text;
+            int maxIteraciones = int.Parse(txtNumeroIteraciones1.Text); // Asume que esto es un TextBox
 
-            // Llamar a la función que implementa el método de bisección
-            double resultado = Biseccion(a, b);
+            double resultado = await BiseccionAsync(a, b, funcionTexto, maxIteraciones);
 
-            // Mostrar el resultado en un cuadro de texto o en un mensaje
             MessageBox.Show($"La raíz aproximada es: {resultado}");
         }
 
-        private double Biseccion(double a, double b)
+
+
+        private async Task<double> BiseccionAsync(double a, double b, string funcionTexto, int maxIteraciones)
         {
-            double errorTolerado = 0.0001; // Establecer la tolerancia de error deseada
-            double c = 0; // Inicializar el valor de c
+            double c = 0, cAnterior = 0, error = 0;
 
-            do
+            for (int i = 0; i < maxIteraciones; i++)
             {
-                // Calcular el punto medio c
+                cAnterior = c;
                 c = (a + b) / 2;
+                double fc = await EvaluarFuncionAsync(funcionTexto, c);
 
-                // Calcular el valor de la función en c
-                double fc = Funcion(c);
-
-                // Verificar el signo de f(a) y f(c)
-                if (Funcion(a) * fc < 0)
+                if (await EvaluarFuncionAsync(funcionTexto, a) * fc < 0)
                 {
-                    b = c; // La raíz está en el intervalo [a, c]
+                    b = c;
                 }
                 else
                 {
-                    a = c; // La raíz está en el intervalo [c, b]
+                    a = c;
                 }
 
-                // Calcular el error
-                double error = Math.Abs(c - ((a + b) / 2)) / c;
-
-                // Verificar si el error es menor que la tolerancia deseada
-                if (error < errorTolerado)
+                if (i > 0)
                 {
-                    break;
+                    error = Math.Abs(c - cAnterior) / Math.Abs(c);
+                    if (error < 0.0001)  // Puedes ajustar este valor de tolerancia según sea necesario
+                        break;
                 }
+            }
 
-            } while (true);
-
-            return c; // Devolver el valor de c como la raíz aproximada
+            return c; // Devolver el valor aproximado de la raíz
         }
-        private double Funcion(double x)
+
+
+
+
+        public class Globals
         {
-            // Definir la función f(x) aquí
-            return Math.Pow(x, 3) + x - 1;
+            public double X { get; set; }
         }
+
+        private async Task<double> EvaluarFuncionAsync(string funcionTexto, double x)
+        {
+            // Reemplaza 'x' con 'X' y '^' con una llamada a Math.Pow
+            string codigo = Regex.Replace(funcionTexto, @"(\w+)\s*\^\s*(\w+)", m => $"Math.Pow({m.Groups[1].Value}, {m.Groups[2].Value})");
+            codigo = codigo.Replace("x", "X");
+
+            var scriptOptions = ScriptOptions.Default
+                .AddReferences(typeof(Math).Assembly)
+                .AddImports("System"); // Asegúrate de incluir el espacio de nombres System
+
+            var script = CSharpScript.Create<double>($"return {codigo};", scriptOptions, typeof(Globals));
+            script.Compile(); // Compila el script para verificar errores
+            var result = await script.RunAsync(new Globals { X = x });
+            return result.ReturnValue;
+        }
+
+
+
+
 
 
 

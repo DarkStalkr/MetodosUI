@@ -9,13 +9,13 @@ namespace MetodosUIVer3
         public frmBisec()
         {
             InitializeComponent();
-            Load += frmBisec_Load;
+            Load += frmBisec2_Load;
             btnCalcular.Click += btnCalcular_Click;
         }
 
         private List<double> errores = new List<double>();
 
-        private void frmBisec_Load(object sender, EventArgs e)
+        private void frmBisec2_Load(object sender, EventArgs e)
         {
             // Se puede Eliminar cualquier lógica relacionada con txtErrorPorcentual en el evento Load si es necesario
         }

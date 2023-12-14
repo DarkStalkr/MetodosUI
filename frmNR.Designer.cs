@@ -182,6 +182,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(135, 14);
@@ -193,8 +194,8 @@
             // 
             // panelAbout
             // 
-            panelAbout.Anchor = AnchorStyles.Top;
             panelAbout.Controls.Add(label6);
+            panelAbout.Dock = DockStyle.Top;
             panelAbout.Location = new Point(0, 94);
             panelAbout.Margin = new Padding(3, 2, 3, 2);
             panelAbout.Name = "panelAbout";
@@ -223,7 +224,7 @@
             // webView2
             // 
             webView2.AllowExternalDrop = true;
-            webView2.Anchor = AnchorStyles.Top;
+            webView2.Anchor = AnchorStyles.None;
             webView2.CreationProperties = null;
             webView2.DefaultBackgroundColor = Color.White;
             webView2.Location = new Point(303, 252);

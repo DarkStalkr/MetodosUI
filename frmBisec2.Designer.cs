@@ -45,6 +45,8 @@
             panelTitle = new Panel();
             label2 = new Label();
             pictureBox2 = new PictureBox();
+            txtNumeroIteraciones1 = new TextBox();
+            label5 = new Label();
             panel2.SuspendLayout();
             pnlMainBisec.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)webView2).BeginInit();
@@ -82,6 +84,8 @@
             // 
             pnlMainBisec.AutoSize = true;
             pnlMainBisec.BackColor = Color.White;
+            pnlMainBisec.Controls.Add(label5);
+            pnlMainBisec.Controls.Add(txtNumeroIteraciones1);
             pnlMainBisec.Controls.Add(label4);
             pnlMainBisec.Controls.Add(label3);
             pnlMainBisec.Controls.Add(label1);
@@ -116,7 +120,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(656, 108);
+            label3.Location = new Point(575, 110);
             label3.Name = "label3";
             label3.Size = new Size(78, 17);
             label3.TabIndex = 16;
@@ -127,7 +131,7 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(471, 108);
+            label1.Location = new Point(390, 110);
             label1.Name = "label1";
             label1.Size = new Size(78, 17);
             label1.TabIndex = 15;
@@ -138,7 +142,7 @@
             lblFuncion.Anchor = AnchorStyles.Top;
             lblFuncion.AutoSize = true;
             lblFuncion.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFuncion.Location = new Point(279, 108);
+            lblFuncion.Location = new Point(198, 110);
             lblFuncion.Name = "lblFuncion";
             lblFuncion.Size = new Size(124, 17);
             lblFuncion.TabIndex = 14;
@@ -151,7 +155,7 @@
             btnCalcular.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCalcular.DialogResult = DialogResult.OK;
             btnCalcular.Font = new Font("Microsoft Sans Serif", 12.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCalcular.Location = new Point(478, 217);
+            btnCalcular.Location = new Point(474, 217);
             btnCalcular.Margin = new Padding(3, 2, 3, 2);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(86, 30);
@@ -163,7 +167,7 @@
             // txtIntervaloA
             // 
             txtIntervaloA.Anchor = AnchorStyles.Top;
-            txtIntervaloA.Location = new Point(431, 145);
+            txtIntervaloA.Location = new Point(350, 147);
             txtIntervaloA.Margin = new Padding(3, 2, 3, 2);
             txtIntervaloA.Multiline = true;
             txtIntervaloA.Name = "txtIntervaloA";
@@ -174,7 +178,7 @@
             // txtIntervaloB
             // 
             txtIntervaloB.Anchor = AnchorStyles.Top;
-            txtIntervaloB.Location = new Point(615, 145);
+            txtIntervaloB.Location = new Point(534, 147);
             txtIntervaloB.Margin = new Padding(3, 2, 3, 2);
             txtIntervaloB.Multiline = true;
             txtIntervaloB.Name = "txtIntervaloB";
@@ -207,7 +211,7 @@
             // txtFuncion
             // 
             txtFuncion.Anchor = AnchorStyles.Top;
-            txtFuncion.Location = new Point(257, 145);
+            txtFuncion.Location = new Point(176, 147);
             txtFuncion.Margin = new Padding(3, 2, 3, 2);
             txtFuncion.Multiline = true;
             txtFuncion.Name = "txtFuncion";
@@ -248,6 +252,24 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
+            // 
+            // txtNumeroIteraciones1
+            // 
+            txtNumeroIteraciones1.Location = new Point(722, 147);
+            txtNumeroIteraciones1.Multiline = true;
+            txtNumeroIteraciones1.Name = "txtNumeroIteraciones1";
+            txtNumeroIteraciones1.Size = new Size(148, 27);
+            txtNumeroIteraciones1.TabIndex = 18;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(759, 110);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 19);
+            label5.TabIndex = 19;
+            label5.Text = "Iteraciones:";
             // 
             // frmBisec2
             // 
@@ -291,5 +313,7 @@
         private Panel panelTitle;
         private Label label2;
         private PictureBox pictureBox2;
+        private Label label5;
+        private TextBox txtNumeroIteraciones1;
     }
 }

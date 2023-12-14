@@ -263,7 +263,7 @@
             MinimumSize = new Size(1052, 610);
             Name = "frmBisec";
             Text = "frmBisec";
-            Load += frmBisec_Load;
+            Load += frmBisec2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)webView2).EndInit();
             pnlMainBisec.ResumeLayout(false);
