@@ -66,6 +66,11 @@ namespace MetodosUIVer3
 
             MessageBox.Show($"Resultados:\na = {a}\nb = {b}\nc = {c}\n\nFórmula: y = {a}x^2 + {b}x + {c}");
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

@@ -30,7 +30,7 @@ namespace MetodosUIVer3
             double a = double.Parse(txtIntervaloA.Text);
             double b = double.Parse(txtIntervaloB.Text);
             string funcionTexto = txtFuncion.Text;
-            int maxIteraciones = int.Parse(txtNumeroIteraciones1.Text); // Asume que esto es un TextBox
+            int maxIteraciones = int.Parse(txtNumeroIteraciones1.Text); // Textbox
 
             double resultado = await BiseccionAsync(a, b, funcionTexto, maxIteraciones);
 
