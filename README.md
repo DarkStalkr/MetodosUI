@@ -2,7 +2,7 @@
 <div class="container">
     <h1>Calculadora de Métodos Numéricos Avanzados</h1>
 
-![Texto Alternativo](Home.png)
+![Texto Alternativo](home.png)
 
     
 
