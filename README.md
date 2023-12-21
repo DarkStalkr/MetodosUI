@@ -3,7 +3,7 @@
     <h1>Calculadora de Métodos Numéricos Avanzados</h1>
 
 <a href="(https://dotnet.microsoft.com/es-es/learn/dotnet/what-is-dotnet)" target="_blank" rel="noreferrer">
-    <img src="Resources/previewhome.png" alt="Preview" width="1280" height="720"/>
+    <img src="Resources/previewhome.png" alt="Preview" width="640" height="360"/>
   </a>
     
 
